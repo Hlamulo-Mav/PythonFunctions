@@ -51,16 +51,18 @@ def Goodbye(name):
 
 print(Goodbye("Zaza"))
 
-# that takes in a number max and returns an array containing all numbers greater than 0 and less than max that are divisible by either 4 or 6, but not both
-def fizz_buzz(max):
-    nums = []
 
+# A method that takes in a number max and returns an array containing all numbers greater than 0 and less than max
+#  that are divisible by either 4 or 6, but not both.
+
+def fizz_buzz(max):
+    Max_arr = []
     for i in range(0, max):
-        if((i % 4 == 0 or i % 6 == 0) and  (i % 4 != 0 or  i % 6 != 0)):
-            nums.append(i)
+        if((i % 4 == 0 and i % 6 != 0) or (i % 6 == 0 and i % 4 != 0)):
+            Max_arr.append(i)
 
             i += 1
-    return(nums)
+    return Max_arr
 
 print(fizz_buzz(15))
-print(fizz_buzz(20))
+print(fizz_buzz(30))
